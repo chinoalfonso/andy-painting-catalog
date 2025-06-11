@@ -18,7 +18,8 @@
         }
 
         body {
-            font-family: 'Helvetica', Arial, sans-serif;
+          /*  font-family: 'Helvetica', Arial, sans-serif;*/
+          font-family: 'Arial, sans-serif';
             line-height: 1.6;
             color: var(--color-primario);
             background-color: var(--color-fondo);
@@ -93,7 +94,20 @@
         nav ul li a:hover {
             background-color: var(--color-borde);
         }
+.info a:hover{
 
+background-color: var(--color-borde);
+
+}
+.info a{
+    text-decoration: none;
+    color: var(--color-primario);
+    font-weight: 500;
+    transition: var(--transicion);
+    padding: 10px 10px;
+    border-radius: var(--radio-borde);
+    
+}
         /* Slider de imágenes */
         .slider {
             width: 100%;
@@ -158,7 +172,7 @@
         }
 
         .home-content p:before {
-            content: "✅";
+           
             position: absolute;
             left: 0;
             top: 0;
@@ -249,52 +263,54 @@
             background-color: white;
             box-shadow: var(--sombra);
         }
+   /*estilo del acordion*/     
+        /* Estilos del acordeón */
+        .accordion {
+            width: 100%;
+            margin: 0 auto;
+        }
         
         .accordion-item {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
         }
-
-        .accordion-title {
-            content: "✅";
+        
+        .accordion-header {
+            background-color: #f8f8f8;
             padding: 15px;
-            background-color: var(--color-fondo);
-            border: 1px solid var(--color-borde);
-            border-radius: var(--radio-borde);
             cursor: pointer;
-            font-weight: bold;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: var(--transicion);
+            font-weight: bold;
+            color: #333;
         }
-
-        .accordion-title:hover {
-            background-color: var(--color-borde);
+        
+        .accordion-header:hover {
+            background-color: #e9e9e9;
         }
-
-        .accordion-title:after {
-            content: '+';
-            font-size: 1.5rem;
-        }
-
-        .accordion-title.active:after {
-            content: '-';
-        }
-
+        
         .accordion-content {
             padding: 0 15px;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
-            border-left: 1px solid var(--color-borde);
-            border-right: 1px solid var(--color-borde);
         }
-
-        .accordion-content.show {
+        
+        .accordion-item.active .accordion-content {
             padding: 15px;
-            max-height: 1000px;
-            border-bottom: 1px solid var(--color-borde);
-            border-radius: 0 0 var(--radio-borde) var(--radio-borde);
+            max-height: 500px;
+            transition: max-height 0.3s ease-in;
+        }
+        
+        .accordion-icon {
+            transition: transform 0.3s;
+        }
+        
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
         }
 
         /* Contacto */
@@ -433,7 +449,7 @@
                 display: flex;
                 justify-content:right;
                 align-items: center;
-                padding: 5px 5%;
+                padding: 5px 3%;
             }
         }
 
@@ -448,8 +464,23 @@
 
             .home-content, .about-content, .contact-content {
                 padding: 25px 25px;
+                
             }
-            
+           
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 30%;
+                background-color: white;
+                box-shadow: var(--sombra);
+                z-index: 1000;
+                display:contents;
+                justify-content:right;
+                align-items: left;
+                padding: 5px 5%;
+            }
         .company-name{
         margin-left: -25px;
     }
@@ -647,4 +678,103 @@
    .zoom {
   transform: 0.9s;
 
+}
+
+@media (max-width: 360px) {
+    
+    nav ul li {
+        margin: 1px 1px;
+        font-size:12.5px;
+       
+    }
+    nav  {
+       margin-left: -40px;
+       
+    }
+    
+
+}
+@media (max-width: 640px) {
+    
+    nav ul li {
+        margin: 1px 1px;
+        font-size:13.5px;
+       margin-top: -6px;
+    }
+    nav  {
+       margin-left: -30px;
+       
+    }
+   
+}
+/*ventana modal de mas informaion*/
+.open-modal-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 22px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.open-modal-btn:hover {
+    background-color: royalblue;
+    
+}
+        /* Estilos del modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            position: relative;
+            padding: 20px;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #777;
+            background: none;
+            border: none;
+        }
+        .close-btn:hover{
+            color:#4CAF50;
+            border-radius: 2px;
+                    
+            box-shadow: 4px 3px green;
+            transition: all 0.3s ease;
+        }
+        .modal-header {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .modal-header h2 {
+            margin: 0;
+            color: #333;
+        }
+.body.modal-open{
+    overflow: hidden;
+   padding-right: 15px;
 }
