@@ -42,17 +42,25 @@
                    }
                });
                
-               // Acordeón About Me
-               const accordionTitles = document.querySelectorAll('.accordion-title');
-               
-               accordionTitles.forEach(title => {
-                   title.addEventListener('click', function() {
-                       this.classList.toggle('active');
-                       const content = this.nextElementSibling;
-                       content.classList.toggle('show');
-                   });
-               });
-               
+                // Funcionalidad del acordeón
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            
+            header.addEventListener('click', () => {
+                // Cerrar otros elementos abiertos
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Abrir/cerrar el elemento clickeado
+                item.classList.toggle('active');
+            });
+        });
+
                // Año actual en el footer
                document.getElementById('year').textContent = new Date().getFullYear();
                

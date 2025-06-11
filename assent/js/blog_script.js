@@ -1,55 +1,38 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.slide2.active');
-    const slides = document.querySelectorAll('.slide2:not(.active)');
-    let currentIndex = 0;
-    
-    // Preparamos el slider para múltiples imágenes
-    slider.style.position = 'relative';
-    slider.style.overflow = 'hidden';
-    
-    // Posicionamos las imágenes una encima de otra
-    slides.forEach(slide => {
-        slide.style.position = 'absolute';
-        slide.style.top = '0';
-        slide.style.left = '0';
-        slide.style.width = '100%';
-        slide.style.height = '100%';
-        slide.style.opacity = '0';
-        slide.style.transition = 'opacity 1s ease-in-out';
-        slider.appendChild(slide);
-    });
-    
-    // Función para cambiar de slide
-    function changeSlide() {
-        // Ocultamos el slide actual
-        if (currentIndex > 0) {
-            slides[currentIndex - 1].style.opacity = '0';
-        } else if (currentIndex === 0 && slides.length > 0) {
-            slides[slides.length - 1].style.opacity = '0';
-        }
+        // Funcionalidad del modal
+//const modal = document.getElementById('myModal');
+       // const btn = document.querySelector('.open-modal-btn');
+     //   const closeBtn = document.querySelector('.close-btn');
         
-        // Mostramos el nuevo slide
-        slides[currentIndex].style.opacity = '1';
+     //   btn.addEventListener('click', () => {
+     //       modal.style.display = 'flex';
+      //      document.body.style.overflow = 'hidden';
+      //  });
         
-        // Actualizamos el índice
-        currentIndex = (currentIndex + 1) % slides.length;
-    }
-    
-    // Iniciamos el intervalo
-    let slideInterval = setInterval(changeSlide, 5000);
-    
-    // Opcional: Pausar el slider al hacer hover
-    slider.addEventListener('mouseenter', () => {
-        clearInterval(slideInterval);
-    });
-    
-    slider.addEventListener('mouseleave', () => {
-        slideInterval = setInterval(changeSlide, 5000);
-    });
-    
-    // Mostrar la primera imagen inmediatamente
-    if (slides.length > 0) {
-        slides[0].style.opacity = '1';
-        currentIndex = 1;
-    }
+      //  closeBtn.addEventListener('click', () => {
+      //      modal.style.display = 'none';
+      //      document.body.style.overflow = 'auto';
+       // });
+        
+       // window.addEventListener('click', (e) => {
+     //       if (e.target === modal) {
+     //           modal.style.display = 'none';
+     //           document.body.style.overflow = 'auto';
+     //       }
+     //   });
+
+// Abrir modal
+btn.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    document.body.classList.add('modal-open');
+});
+
+// Cerrar modal
+function closeModal() {
+    modal.style.display = 'none';
+    document.body.classList.remove('modal-open');
+}
+
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
 });
