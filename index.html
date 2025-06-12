@@ -10,23 +10,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Monitoriar la pagina-->
-    <meta name="google-site-verifivation" content="codigo de verificacion" />
+    <meta name="google-site-verifivation" content="GTM-W467D7ZQ" />
     <title>Catalog of Custom Painting</title>
-
+    <link rel="icon" type="image/x-icon" href="assent/icon/logo.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assent/css/estilo.css">
     <link rel="stylesheet" href="assent/css/Hero-Features-icons.css">
     <link rel="stylesheet" href="assent/bootstrap/css/bootstrap.min.css">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-    </script>
-
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W467D7ZQ');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W467D7ZQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
 </head>
 
 <body>
@@ -34,17 +38,23 @@
     <button id="btnSubir" class="btn-subir" title="Go Up">↑</button>
     <!-- Encabezado con menú fijo -->
     <header>
+         <nav class="navbar">  
         <div class="logo-container">
             <img src="assent/icon/logo.jpg" alt="Logo" class="logo">
             <span class="company-name">Catalog of Custom Painting</span>
         </div>
-        <nav>
-            <ul>
+       <!--  menú fijo -->  
+     
+            <div class="navbar-toggle" id="mobile-menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span >
+             </div>
+            <ul class="navbar-menu" id="navbar-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#contact">Contact</a></li>
-
             </ul>
         </nav>
     </header>
@@ -91,7 +101,7 @@
 
         <div class="gallery">
             <div class="gallery-item">
-                <img src="assent/cuadros/110.jpg.jpg" alt="Obra de arte 1" class="gallery-img">
+                <img src="assent/cuadros/1.jpg.jpg" alt="Obra de arte 1" class="gallery-img">
             </div>
             <div class="gallery-item">
                 <img src="assent/cuadros/2.jpg.jpg" alt="Obra de arte 2" class="gallery-img">
@@ -100,7 +110,7 @@
                 <img src="assent/cuadros/3.jpg.jpg" alt="Obra de arte 3" class="gallery-img">
             </div>
             <div class="gallery-item">
-                <img src="assent/cuadros/109.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
+                <img src="assent/cuadros/4.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
             </div>
             <div class="gallery-item">
                 <img src="assent/cuadros/5.jpg.jpg" alt="Obra de arte 1" class="gallery-img">
@@ -202,7 +212,7 @@
                 <img src="assent/cuadros/37.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
             </div>
             <div class="gallery-item">
-                <img src="assent/cuadros/38.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
+                <img src="assent/cuadros/340.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
             </div>
             <div class="gallery-item">
                 <img src="assent/cuadros/39.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
@@ -351,8 +361,8 @@
                 an unwavering dedication to art and cultural values, values he continues to promote in each of his
                 projects.</p><br>
             <!--Boton modal para ver mas informacion-->
-           
-     <button class="open-modal-btn" title="Click for more" onclick="document.querySelector('.modal').style.display = 'flex'">Click for more
+      <!--       <button class="open-modal-btn">Abrir Modal</button> -->  
+    <button class="open-modal-btn" title="Click for more" onclick="document.querySelector('.modal').style.display = 'flex'">Click for more
                </button>
 
         </div>
@@ -402,7 +412,7 @@
     <div class="modal" id="myModal">
         <div class="modal-content">
             <button class="close-btn">&times;</button>
-            <div class="modal-header">
+         <div class="modal-header">
                 <h3 style="font-family:sans-serif; text-shadow: 2px 3px 19px black;  color: white;">More Information</h3>
             </div>
             
@@ -493,8 +503,7 @@
     <script src="assent/js/programacion.js"></script>
     <script src="assent/bootstrap/bootstrap.min.js"></script>
     <script src="assent/js/blog_script.js"></script>
-        <script src="assent/js/abrir_modal.js"></script> 
-    <script src="assent/js/cerrar_modal.js"></script>
+    <script src="assent/js/menu_telefono.js"></script>
 
 
 
