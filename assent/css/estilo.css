@@ -18,12 +18,12 @@
         }
 
         body {
-          /*  font-family: 'Helvetica', Arial, sans-serif;*/
-          font-family: 'Arial, sans-serif';
+          font-family: 'Helvetica', Arial, sans-serif;
+         /* font-family: 'Arial, sans-serif';*/
             line-height: 1.6;
             color: var(--color-primario);
             background-color: var(--color-fondo);
-            padding-top: 80px;
+            padding-top: 60px;
         }
 
         /* Encabezado */
@@ -44,6 +44,7 @@
         .logo-container {
             display: flex;
             align-items: center;
+            
         }
 
         .logo {
@@ -59,8 +60,7 @@
             text-shadow: 2px 3px 19px black;
             color: white;
             font-weight: bold;
-            
-            
+                 
         }
        .name {
            margin-bottom: -45px;
@@ -70,7 +70,7 @@
             color: var(--color-primario);
         }
 
-        /* Menú */
+        /* Menú viejo 
         nav ul {
             display:flex;
             list-style:none;
@@ -93,7 +93,92 @@
 
         nav ul li a:hover {
             background-color: var(--color-borde);
-        }
+        }*/
+/*menu nuevo*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:white ;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    z-index: 1000;
+}
+/* Menú para desktop */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+}
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.15rem;
+    transition: color 0.3s;
+    font-weight: bold;
+    
+}
+
+.navbar-menu a:hover {
+    color: rgb(11, 85, 4);
+    border-radius: 35px;
+    background: whitesmoke;
+}
+/* Botón de menú móvil */
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.navbar-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: flex;
+     background-color:green;
+    }
+    
+    .navbar-menu {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 70%;
+        height: calc(100vh - 60px);
+        background-color: whitesmoke;
+        flex-direction:column;
+        align-items: center;
+        padding: 20px 0;
+        transition: right 0.3s ease-in-out;
+        font-weight: bold;
+        border-radius:22px;
+    }
+    
+    .navbar-menu.active {
+        right: 0;
+    }
+    
+    .navbar-menu li {
+        margin: 15px 0;
+    }
+}
+
 .info a:hover{
 
 background-color: var(--color-borde);
@@ -120,7 +205,7 @@ background-color: var(--color-borde);
         }
 
         .slide1 {
-            position: absolute;
+         position: absolute;
             top: 0;
             left: 0;
             width:100%;
@@ -129,8 +214,10 @@ background-color: var(--color-borde);
             transition: opacity 1s ease-in-out;
             background-size: cover;
             background-position: center;
-
-        }
+object-fit: contain;
+  object-position: center;  
+ 
+   }
 
         .slide1.active {
             opacity:1;
@@ -382,28 +469,7 @@ background-color: var(--color-borde);
 
         /* Responsive */
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 10px;
-            }
-
-            .logo-container {
-                margin-bottom: 15px;
-               text-align: center;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                
-            }
-
-            nav ul li {
-                margin: 3px 3px;
-                justify-content: center;
-              
-            }
-
+           
             .slider {
                 height: 40vh;
                 min-height: 500px;
@@ -422,9 +488,7 @@ background-color: var(--color-borde);
                 width: 100%;
                 justify-content: center;
             }
-            .company-name{
-                align-items: center;
-            }
+           
             .slide1 {
                 position: absolute;
                 top: 0;
@@ -437,20 +501,7 @@ background-color: var(--color-borde);
                 background-position: center;
     
             }
-            header {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 30%;
-                background-color: white;
-                box-shadow: var(--sombra);
-                z-index: 1000;
-                display: flex;
-                justify-content:right;
-                align-items: center;
-                padding: 5px 3%;
-            }
+            
         }
 
         @media (max-width: 480px) {
@@ -463,27 +514,11 @@ background-color: var(--color-borde);
             }
 
             .home-content, .about-content, .contact-content {
-                padding: 25px 25px;
+                padding: 10px 10px;
                 
             }
            
-            header {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 30%;
-                background-color: white;
-                box-shadow: var(--sombra);
-                z-index: 1000;
-                display:contents;
-                justify-content:right;
-                align-items: left;
-                padding: 5px 5%;
-            }
-        .company-name{
-        margin-left: -25px;
-    }
+           
     .slide1 {
         position: absolute;
         top: 0;
@@ -496,45 +531,18 @@ background-color: var(--color-borde);
         background-position: center;
 
     }
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 30%;
-        background-color: white;
-        box-shadow: var(--sombra);
-        z-index: 1000;
-        display: flex;
-        justify-content:right;
-        align-items: right;
-        padding: 5px 5%;
-    }
-    
+        
     }
        
         @media (max-width: 912px) {
-            header {
-                flex-direction: column;
-                padding: 10px;
-            }
+           
 
             .logo-container {
                 margin-bottom: 15px;
                text-align: center;
               
             }
-    
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav ul li {
-                margin: 4px 4px;
-                justify-content: center;
-            }
-
+                
             .slider {
                 height: 40vh;
                 min-height: 300px;
@@ -558,26 +566,7 @@ background-color: var(--color-borde);
             }
         }
         @media (max-width: 922px) {
-            header {
-                flex-direction: column;
-                padding: 10px;
-            }
-
-            .logo-container {
-                margin-bottom: 15px;
-               text-align: center;
-              
-            }
-    
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav ul li {
-                margin: 4px 4px;
-                justify-content: center;
-            }
+           
 
             .slider {
                 height: 40vh;
@@ -597,31 +586,10 @@ background-color: var(--color-borde);
                 width: 100%;
                 justify-content: center;
             }
-            .company-name{
-                align-items: center;
-            }
+           
         }
         @media (max-width: 1024px) {
-            header {
-                flex-direction: column;
-                padding: 10px;
-            }
-
-            .logo-container {
-                margin-bottom: 15px;
-               text-align: center;
-              
-            }
-    
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav ul li {
-                margin: 4px 4px;
-                justify-content: center;
-            }
+           
 
             .slider {
                 height: 40vh;
@@ -641,9 +609,7 @@ background-color: var(--color-borde);
                 width: 100%;
                 justify-content: center;
             }
-            .company-name{
-                align-items: center;
-            }
+           
         }
    /*boton subir*/
  .btn-subir{
@@ -680,47 +646,27 @@ background-color: var(--color-borde);
 
 }
 
-@media (max-width: 360px) {
-    
-    nav ul li {
-        margin: 1px 1px;
-        font-size:12.5px;
-       
-    }
-    nav  {
-       margin-left: -40px;
-       
-    }
-    
 
-}
-@media (max-width: 640px) {
-    
-    nav ul li {
-        margin: 1px 1px;
-        font-size:13.5px;
-       margin-top: -6px;
-    }
-    nav  {
-       margin-left: -30px;
-       
-    }
-   
-}
 /*ventana modal de mas informaion*/
-.open-modal-btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 5px 22px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 4px;
-}
-.open-modal-btn:hover {
-    background-color: royalblue;
-    
-}
+        /* Contenido principal */
+        .main-content {
+            margin-top: 60px;
+            padding: 20px;
+        }
+        
+        .open-modal-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 13px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .open-modal-btn:hover{
+            background-color:royalblue;
+  transform: scale(1, 1);
+        }
         /* Estilos del modal */
         .modal {
             display: none;
@@ -734,6 +680,7 @@ background-color: var(--color-borde);
             justify-content: center;
             align-items: center;
         }
+        
         .modal-content {
             background-color: white;
             width: 90%;
@@ -751,19 +698,13 @@ background-color: var(--color-borde);
             position: absolute;
             top: 10px;
             right: 15px;
-            font-size: 30px;
+            font-size: 24px;
             cursor: pointer;
             color: #777;
             background: none;
             border: none;
         }
-        .close-btn:hover{
-            color:#4CAF50;
-            border-radius: 2px;
-                    
-            box-shadow: 4px 3px green;
-            transition: all 0.3s ease;
-        }
+        
         .modal-header {
             margin-bottom: 20px;
             padding-bottom: 10px;
@@ -774,7 +715,3 @@ background-color: var(--color-borde);
             margin: 0;
             color: #333;
         }
-.body.modal-open{
-    overflow: hidden;
-   padding-right: 15px;
-}
