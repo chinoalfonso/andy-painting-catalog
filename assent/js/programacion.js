@@ -1,6 +1,6 @@
 ﻿
              // Slider automático
-             let currentSlide = 0;
+           /*  let currentSlide = 0;
              const slides = document.querySelectorAll('.slide1');
              
              function showSlide(n) {
@@ -13,13 +13,37 @@
                  showSlide(currentSlide + 1);
              }
              
-             setInterval(nextSlide, 5000);
+             setInterval(nextSlide, 5000);*/
+             const slides = document.querySelectorAll('.slide-head');
+             let currentIndex = 0;
+         
+             function showSlide(index) {
+               slides.forEach((slides, i) => {
+                 slides.classList.remove('active');
+                 if (i === index) {
+                   slides.classList.add('active');
+                 }
+               });
+             }
+         
+             function nextSlide() {
+               currentIndex = (currentIndex + 1) % slides.length;
+               showSlide(currentIndex);
+             }
+         
+             // Mostrar primer slide
+             showSlide(currentIndex);
+         
+             // Cambiar slide cada 6 segundos
+             setInterval(nextSlide, 6000);
+         
+            
      
 //slider automatico blog
 
 
                // Galería modal
-               const modal = document.getElementById('imageModal');
+         /*     const modal = document.getElementById('imageModal');
                const modalImg = document.getElementById('modalImage');
                const galleryImgs = document.querySelectorAll('.gallery-img');
                const closeModal = document.querySelector('.close-modal');
@@ -40,7 +64,29 @@
                    if (event.target === modal) {
                        modal.style.display = 'none';
                    }
-               });
+               });*/
+               // Funcionalidad del modal boton info
+        const modal_info = document.getElementById('myModal_info');
+        const btn_info = document.querySelector('.open-modal-btn-info');
+        const closeBtn_info = document.querySelector('.close-btn-info');
+        
+        btn_info.addEventListener('click', () => {
+            modal_info.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeBtn_info.addEventListener('click', () => {
+            modal_info.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal_info.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+
                
                 // Funcionalidad del acordeón
         const accordionItems = document.querySelectorAll('.accordion-item');
@@ -77,4 +123,6 @@
                        });
                    });
                });
-       
+      /*prueba de dialog*/
+
+

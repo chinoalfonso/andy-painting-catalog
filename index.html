@@ -17,397 +17,595 @@
     <link rel="stylesheet" href="assent/css/estilo.css">
     <link rel="stylesheet" href="assent/css/Hero-Features-icons.css">
     <link rel="stylesheet" href="assent/bootstrap/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="assent/css/estilo_encabezado.css">
+    <link rel="stylesheet" href="assent/css/whatup.css">
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W467D7ZQ');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W467D7ZQ');</script>
     <!-- End Google Tag Manager -->
-    
+
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W467D7ZQ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W467D7ZQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
+
 </head>
 
 <body>
     <!-- el boton de subir -->
     <button id="btnSubir" class="btn-subir" title="Go Up">↑</button>
     <!-- Encabezado con menú fijo -->
-    <header>
-         <nav class="navbar">  
+    <header class="header">
+        <!--     <nav class="navbar">  
         <div class="logo-container">
             <img src="assent/icon/logo.jpg" alt="Logo" class="logo" >
             <span class="company-name" style="font-family:PlayfairDisplay-Regular">Catalog of Custom Painting</span>
+        </div>-->
+        <!--  menú fijo -->
+        <div class="left-container">
+            <div class="logo-container">
+                <img src="assent/icon/logo2.jpg" alt="Logo" class="logo" />
+
+                <span class="empresa-nombre"
+                    style="font-family:PlayfairDisplay-Regular;  box-shadow: 0 4px 0 #6eabc6;">Catalog of Custom
+                    Painting</span>
+
+                <div class="social-icons">
+                    <a href="https://facebook.com/18133181058 " target="_blank" title="Facebook"><img class="redes"
+                            src="assent/icon/facebook.png"></a>
+                    <a href="mailto:duarteduran9410@gmail.com" title="Gmail"><img class="redes"
+                            src="assent/icon/gmail.png"></a>
+                    <a href="https://instagram.com/andywilliam_pintor " target="_blank" title="Instagram"><img
+                            class="redes" src="assent/icon/Instagram_.png"></a>
+                </div>
+            </div>
         </div>
-       <!--  menú fijo -->  
-     
+        <nav>
+            <ul class="navbar-menu" id="navbar-menu" style="font-family:PlayfairDisplay-Regular;">
+                <li><a href="#inicio">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+
             <div class="navbar-toggle" id="mobile-menu">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span >
-             </div>
-            <ul class="navbar-menu" id="navbar-menu" style="font-family:PlayfairDisplay-Regular">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <!--     <ul class="navbar-menu" id="navbar-menu" style="font-family:PlayfairDisplay-Regular">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#contact">Contact</a></li>
-            </ul>
+            </ul>-->
         </nav>
+
     </header>
 
     <!-- Slider de imágenes -->
-    <div class="slider">
-        <div class="slide1 active" style="background-image: url('/assent/cuadros/164.jpg.jpg')"></div>
-        <div class="slide1" style="background-image: url('/assent/cuadros/20.jpg.jpg')"></div>
-        <div class="slide1" style="background-image: url('/assent/cuadros/95.jpg.jpg')"></div>
+    <!--<div class="slider-header">
+    <div class="slider-container">  
 
+        <div class="slide1 active" style="background-image: url('assent/cuadros/100.jpg.jpg')">
+            <div class="slide-content">
+                <h1>Título 1</h1>
+                <p>Descripción breve para móviles.</p>
+            </div>
+        </div>
+
+        <div class="slide1" style="background-image: url('assent/cuadros/14.jpg.jpg')">
+            <div class="slide-content">
+                <h1>Título 1</h1>
+                <p>Descripción breve para móviles.</p>
+            </div>
+        </div>
+
+        <div class="slide1" style="background-image: url('assent/cuadros/95.jpg.jpg')">
+            <div class="slide-content">
+                <h1>Título 1</h1>
+                <p>Descripción breve para móviles.</p>
+            </div>
+
+        </div>
     </div>
-
-    <!-- Sección Home -->
-    <section id="home"> 
-       <div class="encabezado_foto_imagen">
-       <img src="/xx.png" alt="author" class="autor">
-     </div>
-
-         <h1 class="section-title" style="font-family:PlayfairDisplay-Regular; font-size:45px;" >Andy William Duarte Durán</h1></div>
+</div>    -->
+    <div class="contenedor-secciones"> 
+    <section class="secciones" id="inicio">
         <div class="home-content">
-            <h4 class="intro" style="text-align: center; font-family: Lato-Regularn;">A Space Where Art Comes to Life<br> Welcome to My Creative World<br><br> </h4></b>
-            <p class="parrafo_intro" style="text-align: justify; font-family:Lato-Regularn;">Welcome to my virtual studio, a place where a passion for color and form is transformed into unique works of art. My name is Andy William Duarte Durán, and I am a professional visual artist with a profound calling for creation and teaching.
-            </p>
-            <p  class="parrafo_intro" style="text-align: justify;font-family:Lato-Regularn;">My journey as a painting teacher has allowed me to guide countless creative souls, but my most personal work resides on the canvas. Additionally, my specialization as a restorer of heritage artworks on paper has granted me an intimate understanding of classical techniques and an immense respect for the durability and legacy of art. This dedication and technical knowledge are the soul of every painting I create for you.</p>
-            <p class="parrafo_intro" style="text-align: justify; font-family:Lato-Regularn;">Have you been inspired by my catalog? Wonderful! Each painting you see is just the beginning of what we can create together. My works are never pre-made; each piece is a conversation between your vision and my hands, painted exclusively for you once you place your order.</p>
-                <p  class="parrafo_intro" style="text-align: justify; font-family:Lato-Regularn;">Imagine that empty wall coming to life with a work of art designed for your space, adapting not only the size and details but also the emotion you wish to evoke. </p>
-              <p  class="parrafo_intro" style="text-align: justify;  font-family:Lato-Regularn;">Each piece is 100% original, hand-painted in oil on canvas. These are not prints; your painting will have the rich texture and unparalleled quality that only an authentic work of art can offer.</b> </p>        
-           
-            <p class="parrafo_intro" style="text-align: justify; font-family:Lato-Regularn;"> The price will be personally tailored, based not only on the size but also on the complexity of the work, ensuring a piece that you will not only love but that will also fit your budget.</p><br>
+            <!-- Slide 1 -->
+            <div class="slide-head active" style="background-image: url('assent/foto_autor.jpg');">
+                <div class="content-wrapper">
+                    <h2 style="font-family:PlayfairDisplay-Regular; font-size:45px;">Andy William Duarte Durán</h2>
+                    <p>Descubre la mejor experiencia de compra.</p>
+                </div>
+            </div>
 
-            <h4 class="info_abajo" style="text-align: center; font-family:Lato-Regularn;">¡Start Creating Your Ideal Artwork in Three Simple Steps!</4>
+            <!-- Slide 2 -->
+            <div class="slide-head" style="background-image: url('assent/cuadros-categ/caballos/251.jpg');">
+                <div class="content-wrapper">
+                    <h2>Horse Paintings.</h2>
+                    <p>"The indomitable soul of nature: Paintings that capture the grace, strength, and essence of
+                        wildlife. A painting of horses in motion, or the deep gaze of a wild animal, with colors and
+                        textures that convey its energy and spirit. "</p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide-head" style="background-image: url('assent/cuadros-categ/humanizadas/483.jpg');">
+                <div class="content-wrapper">
+                    <h2>Expressive Portrait.</h2>
+                    <p>"Your story, our canvas: Portraits that capture the soul and the moment."
+                        A close-up portrait of a person with a profound expression or in a moment of reflection,
+                        with a painterly style that highlights personality.</p>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="slide-head" style="background-image: url('assent/cuadros-categ/abstracto/1861.jpg');">
+                <div class="content-wrapper">
+                    <h2>Abstract or Modern Work.</h2>
+                    <p>"Beyond the Visible: Exploring Emotions and Forms in Contemporary Art."
+                        An abstract work with intense colors and dynamic forms that invites personal interpretation.</p>
+                </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="slide-head" style="background-image: url('assent/cuadros-categ/bodegones/740.jpg');">
+                <div class="content-wrapper">
+                    <h2>Still Life.</h2>
+                    <p>"Beauty in the everyday: Details that transform space and spirit."
+                        An elegant still life with everyday objects artistically arranged,
+                        with an interplay of light and shadow that gives them depth.</p>
+                </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="slide-head" style="background-image: url('assent/cuadros-categ/paisajes/175.jpg');">
+                <div class="content-wrapper">
+                    <h2>Sunset Landscapes.</h2>
+                    <p>"Where color comes alive: Discover the essence of light in every brushstroke.
+                        An enhancement to your image, with more vibrant colors, a more dynamic composition,
+                        and perhaps a more artistic touch while maintaining the serenity of the landscape.</p>
+                </div>
+            </div>
         </div>
-    </section>
+        </section>
 
-    <!-- Sección Galería -->
-    <section id="gallery">
-        <h1 class="section-title" style="text-decoration: underline; text-shadow: 2px 3px 19px black;  color: white; font-family:PlayfairDisplay-Regular">
-            Gallery</h1>
 
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="assent/cuadros/1.jpg.jpg" alt="Obra de arte 1" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/2.jpg.jpg" alt="Obra de arte 2" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/3.jpg.jpg" alt="Obra de arte 3" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/4.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/5.jpg.jpg" alt="Obra de arte 1" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/6.jpg.jpg" alt="Obra de arte 2" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/7.jpg.jpg" alt="Obra de arte 3" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/8.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/9.jpg.jpg" alt="Obra de arte 1" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/10.jpg.jpg" alt="Obra de arte 2" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/11.jpg.jpg" alt="Obra de arte 3" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/12.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/13.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/14.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/15.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/16.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/17.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/18.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/251.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/20.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/21.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/826.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/23.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/24.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/25.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/26.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/27.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/28.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/29.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/30.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/31.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/32.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/33.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/34.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/35.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/36.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/37.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/340.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/39.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/40.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/41.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/42.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-
-            <div class="gallery-item">
-                <img src="assent/cuadros/43.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/44.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/45.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/46.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/47.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/48.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/49.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/50.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <!--otra-->
-            <div class="gallery-item">
-                <img src="assent/cuadros/51.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/52.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/53.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-
-            <div class="gallery-item">
-                <img src="assent/cuadros/54.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/55.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/56.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/57.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/58.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/59.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/60.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/61.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <!--otra-->
-            <div class="gallery-item">
-                <img src="assent/cuadros/62.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/63.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/64.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-
-            <div class="gallery-item">
-                <img src="assent/cuadros/65.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/66.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/67.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/68.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/69.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/70.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/84.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <div class="gallery-item">
-                <img src="assent/cuadros/192.jpg.jpg" alt="Obra de arte 4" class="gallery-img">
-            </div>
-            <!--otra-->
-
+        <!-- BotÃ³n de WhatsApp -->
+        <div id="whatsapp-button">
+            <img src="/assent/icon/whatsapp.png " alt="WhatsApp" />
         </div>
-    </section>
 
-    <!-- Modal para imágenes de la galería -->
-    <div class="modal1" id="imageModal">
+        <!-- Modal de WhatsApp -->
+        <div class="modal-overlay" id="modal-whatup-id">
+            <div class="modal-whatup">
+                <span class="close-btn" id="closeModal">&times;</span>
+                <h2 style=" font-family:Lato-Regularn; text-shadow: 2px 3px 19px black;">Contact with me</h2>
+                <p style="font-family:Lato-Regularn;">Write your messege and sending by WhatsApp:</p>
+                <textarea id="messageInput" placeholder="Write your messege here­..."></textarea>
+                <button id="sendButton" style="font-family:Lato-Regularn;">Send by WhatsApp</button>
+            </div>
+        </div>
+
+        <!-- hasta aqui -->
+
+        <!-- Sección Home -->
+        <section class="secciones" id="home">
+            <!-- <div class="encabezado_foto_imagen">
+       <img src="/xx.png" alt="author" class="autor">
+     </div>-->
+
+            <div class="home-content">
+                <h4 class="intro"
+                    style="text-align: center; font-family: Lato-Regularn;  text-shadow: 2px 3px 19px black; color: white;">
+                    A Space Where Art Comes to Life <br>Welcome to My Creative World </b><br><br></h4>
+                <p class="parrafo_intro" style="text-align: justify; font-family:Lato-Regularn;">Welcome to my virtual
+                    studio, a place where a passion for color and form is transformed into unique works of art. My name
+                    is
+                    Andy William Duarte Durán, and I am a professional visual artist with a profound calling for
+                    creation
+                    and teaching.
+                </p>
+                <p class="parrafo_intro" style="text-align: justify;font-family:Lato-Regularn;">My journey as a painting
+                    teacher has allowed me to guide countless creative souls, but my most personal work resides on the
+                    canvas. Additionally, my specialization as a restorer of heritage artworks on paper has granted me
+                    an
+                    intimate understanding of classical techniques and an immense respect for the durability and legacy
+                    of
+                    art. This dedication and technical knowledge are the soul of every painting I create for you.</p>
+                <p class="parrafo_intro" style="text-align: justify; font-family:Lato-Regularn;">Have you been inspired
+                    by
+                    my catalog? Wonderful! Each painting you see is just the beginning of what we can create together.
+                    My
+                    works are never pre-made; each piece is a conversation between your vision and my hands, painted
+                    exclusively for you once you place your order.</p>
+                <p class="parrafo_intro" style="text-align: justify; font-family:Lato-Regularn;">Imagine that empty wall
+                    coming to life with a work of art designed for your space, adapting not only the size and details
+                    but
+                    also the emotion you wish to evoke. </p>
+                <p class="parrafo_intro" style="text-align: justify;  font-family:Lato-Regularn;">Each piece is 100%
+                    original, hand-painted in oil on canvas. These are not prints; your painting will have the rich
+                    texture
+                    and unparalleled quality that only an authentic work of art can offer.</b> </p>
+
+                <p class="parrafo_intro" style="text-align: justify; font-family:Lato-Regularn;"> The price will be
+                    personally tailored, based not only on the size but also on the complexity of the work, ensuring a
+                    piece
+                    that you will not only love but that will also fit your budget.</p><br>
+
+                <h4 class="info_abajo"
+                    style="text-align: center; font-family:Lato-Regularn;  text-shadow: 2px 3px 19px black; color:white; ">
+                    ¡Start Creating Your Ideal Artwork in Three Simple Steps!</4>
+            </div>
+        </section>
+
+        <!-- Sección Galería -->
+        <section class="secciones" id="gallery">
+            <div class="home-content">
+                <h1 class="section-title"
+                    style="text-decoration: underline; text-shadow: 2px 3px 19px black;  color: white; font-family:PlayfairDisplay-Regular;  text-align: center;">
+                    Gallery</h1>
+
+
+                <P class="borde-izquierdo" class="letra-capital"
+                    style="font-family:Lato-Regularn; text-align: justify; ">
+                    Step into a captivating gallary featuring a rich collection of images
+                    across multiple themes, each curated to inspire and delight. Here's what you can explore. Immerse
+                    yourself in vibrant colors, dynamic
+                    shapes, and thought-provoking compositions that challenge perception.
+                    Discover meticulously arranged objects, capturing textre, light, and symbolism in classic and
+                    contemporary styles.</p>
+                <p class="borde-izquierdo" class="letra-capital"
+                    style="font-family:Lato-Regularn; text-align: justify;">
+                    Desides admire the elegance and power of the majestic creatures, portrayed in motion or serene
+                    stillnes.
+                    Explore innovative patterns, digital art, and creative concepts blending aesthetics with
+                    functionality.
+                    Revel in the delicate beauty of blooms, from hyper-realistic details to impressionist
+                    interpretations.
+                    Encounter artworks where animals or objects take on human traits, adding whimsy or deeper narrative.
+                    From wildlife to pets, each piece celebrates the diversity of the animal kingdom.
+                    Traverse serene countryside, dramatic skies, and urban vistas through the artist’s lens.</P>
+                <p style="font-family:Lato-Regularn; text-align: center;  box-shadow: 0 4px 0 #253e4c;">Select any image
+                    from these categories, and our skilled painters will recreate it on canvas—a perfect way to own a
+                    personalized masterpiece . </P>
+            </div>
+            <!--Botones de las galarias-->
+            <div class="grid-container">
+                <button class="boton-categoria" id="album-button"
+                    style="font-family:PlayfairDisplay-Regular; background-color: #ffe16d;" title="Click for more"
+                    data-galeria="abstracto">
+                    <div class="button-text">
+                        <div class="title">Abstract </div>
+                        <div class="artist"
+                            style="font-size: 0.85rem; color: black; text-align: justify; font-family:Lato-Regularn; box-shadow: 0 4px 0 #253e4c;">
+                            Abstract art breaks free from realism, using shapes, colors, and textures to evoke emotions
+                            and
+                            ideas. Each piece invites personal
+                            interpretation, creating a visual language that speaks through bold contrasts or subtle
+                            harmonies.</div>
+                    </div>
+
+                    <img src="assent/cuadros-categ/abstracto/188.jpg" alt="Short" class="album-thumbnail" />
+
+                </button>
+                <button class="boton-categoria" id="album-button"
+                    style="font-family:PlayfairDisplay-Regular;background-color: #6eabc6; " title="Click for more"
+                    data-galeria="bodegones">
+                    <div class="button-text">
+                        <div class="title">Still lifes </div>
+                        <div class="artist"
+                            style="font-size: 0.85rem; color: black; text-align: justify;font-family:Lato-Regularn; box-shadow: 0 4px 0 #253e4c;">
+                            Still
+                            life paintings focus on inanimate
+                            objects like fruits, vases, or books, arranged to highlight composition, texture, and
+                            lighting.
+                            These works showcase an artist's ability to transform ordinary
+                            items into captivating visual stories, balancing realism and artistic expression. </div>
+                    </div>
+                    <img src="assent/cuadros-categ/bodegones/214.jpg" alt="Short" class="album-thumbnail" />
+
+                </button>
+                <button id="album-button" class="boton-categoria"
+                    style="font-family:PlayfairDisplay-Regular; background-color: #6eabc6; " title="Click for more"
+                    data-galeria="caballos">
+                    <div class="button-text">
+                        <div class="title">Horses </div>
+                        <div class="artist"
+                            style="font-size: 0.85rem; color: black; text-align: justify; font-family:Lato-Regularn; box-shadow: 0 4px 0 #253e4c;">
+                            Horses
+                            symbolize strength, freedom, and elegance in art. Whether galloping wildly or standing
+                            majestically, their dynamic forms and
+                            flowing manes make them a powerful and timeless subject.
+                        </div>
+                    </div>
+                    <img src="assent/cuadros-categ/caballos/251.jpg" alt="Short" class="album-thumbnail" />
+
+                </button>
+                <button id="album-button" class="boton-categoria"
+                    style="font-family:PlayfairDisplay-Regular; background-color: #ffe16d; " title="Click for more"
+                    data-galeria="diseño">
+                    <div class="button-text">
+                        <div class="title">Designs </div>
+                        <div class="artist"
+                            style="font-size: 0.85rem; color: black; text-align: justify; font-family:Lato-Regularn;box-shadow: 0 4px 0  #253e4c;">
+                            Design-oriented art merges aesthetics with functionality, featuring clean lines, geometric
+                            patterns, and innovative concepts. It can be minimalist or intricate, serving both
+                            decorative
+                            and conceptual purposes in modern and contemporary styles.
+                        </div>
+                    </div>
+                    <img src="assent/cuadros-categ/diseño/678.jpg" alt="Short" class="album-thumbnail" />
+                </button>
+                <button id="album-button" class="boton-categoria"
+                    style="font-family:PlayfairDisplay-Regular;background-color: #ffe16d; " title="Click for more"
+                    data-galeria="flores">
+                    <div class="button-text">
+                        <div class="title">Flowers </div>
+                        <div class="artist"
+                            style="font-size: 0.85rem; color: black; text-align: justify; font-family:Lato-Regularn; box-shadow: 0 4px 0#253e4c;">
+                            Flowers, a classic symbol of love and beauty,
+                            are often painted with rich textures and vivid colors.
+                            Whether in a realistic bouquet or an abstract swirl of petals, they bring romance and
+                            sophistication to art.
+                        </div>
+                    </div>
+                    <img src="assent/cuadros-categ/florales/403.jpg" alt="Short" class="album-thumbnail" />
+                </button>
+                <button id="album-button" class="boton-categoria"
+                    style="font-family:PlayfairDisplay-Regular;background-color: #6eabc6;  " title="Click for more"
+                    data-galeria="humanizadas">
+                    <div class="button-text">
+                        <div class="title">Humanized </div>
+                        <div class="artist"
+                            style="font-size: 0.85rem; color: black; text-align: justify; font-family:Lato-Regularn; box-shadow: 0 4px 0 #253e4c;">
+                            These
+                            artworks depict human forms with
+                            exaggerated emotions, symbolic elements, or surreal twists.
+                            They explore identity, culture, and storytelling, blending realism with imaginative
+                            expression
+                            to
+                            convey deeper meanings. </div>
+                    </div>
+                    <img src="assent/cuadros-categ/humanizadas/721.jpg" alt="Short" class="album-thumbnail" />
+                </button>
+                <button id="album-button" class="boton-categoria"
+                    style="font-family:PlayfairDisplay-Regular;background-color: #6eabc6; " title="Click for more"
+                    data-galeria="maquinas">
+                    <div class="button-text">
+                        <div class="title">Machine </div>
+                        <div class="artist"
+                            style="font-size: 0.85rem; color: black; text-align: justify; font-family:Lato-Regularn; box-shadow: 0 4px 0 #253e4c;">
+                            Industrial and mechanical subjects gears,
+                            engines, or futuristic constructsâ€”inspire art that blends precision with creativity.
+                            These works explore humanity's relationship with technology, from gritty realism to sleek,
+                            sci-fi aesthetics. </div>
+                    </div>
+                    <img src="assent/cuadros-categ/máquinas/164.jpg" alt="Short" class="album-thumbnail" />
+                </button>
+                <button id="album-button" class="boton-categoria"
+                    style="font-family:PlayfairDisplay-Regular; background-color: #ffe16d; " title="Click for more"
+                    data-galeria="animales">
+                    <div class="button-text">
+                        <div class="title">Animals</div>
+                        <div class="artist"
+                            style="font-size: 0.85rem; color: black; text-align: justify; font-family:Lato-Regularn;box-shadow: 0 4px 0#253e4c;">
+                            Animal
+                            paintings capture the essence of creatures wild or domestic with lifelike precision or
+                            creative
+                            flair. From fierce predators to gentle pets, these works highlight the beauty and
+                            personality of
+                            the animal kingdom.
+                        </div>
+                    </div>
+                    <img src="assent/cuadros-categ/otros animales/494.jpg" alt="Short" class="album-thumbnail" />
+                </button>
+                <button id="album-button" class="boton-categoria"
+                    style="font-family:PlayfairDisplay-Regular; background-color: #ffe16d; " title="Click for more"
+                    data-galeria="paisajes">
+                    <div class="button-text">
+                        <div class="title">Landscapes</div>
+                        <div class="artist"
+                            style="font-size: 0.85rem; color: black; text-align: justify; font-family:Lato-Regularn; box-shadow: 0 4px 0#253e4c;">
+                            Landscape paintings capture the grandeur of
+                            natureâ€”rolling hills, serene lakes, or dramatic skies.
+                            They transport viewers to different worlds, reflecting the artist's perception of
+                            light, atmosphere, and emotion in the natural environment. </div>
+                    </div>
+                    <img src="assent/cuadros-categ/paisajes/17.jpg" alt="Short" class="album-thumbnail" />
+                </button>
+                <button id="album-button" class="boton-categoria"
+                    style="font-family:PlayfairDisplay-Regular;background-color: #6eabc6; " title="Click for more"
+                    data-galeria="plantas">
+                    <div class="button-text">
+                        <div class="title">Plants </div>
+                        <div class="artist"
+                            style="font-size: 0.85rem; color: black; text-align: justify; font-family:Lato-Regularn; box-shadow: 0 4px 0#253e4c;">
+                            Plant-themed art celebrates the beauty of nature,
+                            from delicate leaves to vibrant flowers. Whether painted in hyper-realistic detail or
+                            stylized
+                            abstraction,
+                            these works evoke growth, life, and tranquility, bringing the serenity of nature into any
+                            space.
+                        </div>
+                    </div>
+                    <img src="assent/cuadros-categ/plantas/766.jpg" alt="Short" class="album-thumbnail" />
+                </button>
+            </div>
+
+            <!-- Modal para la galería -->
+            <div id="galeriaModal" class="modal">
+                <span class="cerrar">&times;</span>
+                <div class="modal-contenido">
+                    <div class="carrusel">
+                        <!-- Las imágenes se insertarán aquí dinámicamente -->
+                    </div>
+                    <div class="indicadores">
+                        <span id="contador">1 de 5</span>
+                        <div class="puntos" id="puntos-indicadores"></div>
+                    </div>
+                </div>
+                <a class="anterior" onclick="cambiarSlide(-1)">&#10094;</a>
+                <a class="siguiente" onclick="cambiarSlide(1)">&#10095;</a>
+            </div>
+
+        </section>
+
+        <!-- Modal para imágenes de la galería -->
+        <!--  <div class="modal1" id="imageModal">
         <span class="close-modal">&times;</span>
         <div class="modal1-content">
             <img src="" alt="" class="modal1-img" id="modalImage">
         </div>
+    </div>-->
+
+        <!-- Sección About Me -->
+
+        <section class="secciones" id="about">
+            <div class="home-content">
+                <h1 class="section-title"
+                    style="text-decoration: underline; text-shadow: 2px 3px 19px black;  color: white; font-family:PlayfairDisplay-Regular">
+                    About Me</h1><br>
+                <p class="letra-capital" class="texto_about" style="text-align: justify; font-family:Lato-Regularn;">
+                    Born in Santa Clara, Cuba,
+                    <b>Andy William Duarte Durán </b>developed a deep passion for painting from a
+                    very young age, which led him to explore the world of art through studies with various private
+                    teachers.
+                </p>
+                <p class="letra-capital" class="texto_about" style=" text-align: justify; font-family:Lato-Regularn;">
+                    His
+                    dedication and talent
+                    led him to enroll at the Oscar Fernández Morera Professional Art School in
+                    Trinidad, Cuba, where he completed his final year at the Benny Moré Academy in Cienfuegos,
+                    consolidating
+                    his skills and expanding his artistic vision.</p>
+                <p class="letra-capital" class="texto_about" style="text-align: justify; font-family:Lato-Regularn;">
+                    During
+                    his training, Andy
+                    participated in multiple exhibitions that allowed him to share his work with a
+                    wider audience and receive valuable feedback on his art.</p>
+                <p class="letra-capital" class="texto_about" style="text-align: justify; font-family:Lato-Regularn;">
+                    After
+                    completing his studies,
+                    he served two years of military service and later enrolled at the Higher
+                    Institute of Art in Havana, where he earned a degree in Conservation and Restoration of Cultural
+                    Heritage.</p>
+                <p class="letra-capital" class="texto_about" style="text-align: justify; font-family:Lato-Regularn;">He
+                    had
+                    the opportunity to
+                    share his passion and knowledge as a professor at his alma mater's Paper and
+                    Photography Restoration Workshop, guiding future restorers and artists in the preservation of
+                    cultural
+                    heritage.</p>
+                <p class="letra-capital" class="texto_about" style="text-align: justify; font-family:Lato-Regularn;">His
+                    work at the Cuban Fund
+                    for Cultural Assets as a decorator also allowed him to explore his creativity
+                    through projects aimed at strengthening his country's cultural identity.</p>
+                <p class="letra-capital" class="texto_about" style="text-align: justify; font-family:Lato-Regularn;">
+                    Throughout his career, Andy has participated in various artistic initiatives and restoration
+                    projects,
+                    standing out for his commitment to heritage conservation. His approach to teaching and practice
+                    reflects
+                    an unwavering dedication to art and cultural values, values he continues to promote in each of his
+                    projects.</p><br>
+                <!--Boton modal para ver mas informacion-->
+                <!--       <button class="open-modal-btn">Abrir Modal</button> -->
+                <button class="open-modal-btn-info" style="font-family:PlayfairDisplay-Regular;" title="Click for more"
+                    onclick="document.querySelector('.modal_info').style.display = 'flex'">Click for more
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Sección Contacto -->
+        <section class="secciones" id="contact">
+            <div class="home-content">
+                <h1 class="section-title"
+                    style="text-decoration: underline; text-shadow: 2px 3px 19px black;  color: white; font-family: Lato-Regular;">
+                    Contact</h1><br>
+                <P class="borde-izquierdo" class="letra-capital"
+                    style="font-family:Lato-Regularn; text-align: justify;">The Contact section is your gateway to
+                    seamless communication with the gallery. Whether you’re inquiring about artwork, commissioning a
+                    custom painting, or scheduling a visit, here’s what you’ll find: </P>
+                <P class="borde-izquierdo" style="font-family:Lato-Regularn; text-align: justify;">
+                <ul classe="lista" style="font-family:Lato-Regularn; text-align: justify;">
+                    <li> Direct Inquiries: Reach out via email or phone for questions about collections, pricing, or
+                        collaborations. </li>
+                    <li> Custom Orders: Request a hand-painted reproduction of your chosen image, with details on
+                        timelines
+                        and sizing. </li>
+                    <li>Feedback & Support: Share your experience or report technical issues—we value your input. </li>
+                    <li>Visit Us: Address and hours are listed for in-person gallery visits or private viewings. </li>
+                </ul>
+                </P>
+
+                <p class="borde-izquierdo"
+                    style="font-family:Lato-Regularn; text-align: center;  box-shadow: 2px 4px 2px #253e4c; color: white;font-size: 20px;">
+                    Prompt responses and personalized assistance ensure your artistic needs are met with care. </P>
+                <div class="contact-links">
+
+                    <a href="mailto:duarteduran9410@gmail.com" class="contact-link  font-family: Lato-Regularn;"
+                        target="_blank">
+                        <!--     <i class="fas fa-envelope"></i> --><img class="redes" src="assent/icon/gmail.png"><span
+                            style=" font-family:Lato-Regularn;"> duarteduran9410@gmail.com
+                        </span>
+                    </a>
+                    <a href="https://facebook.com/18133181058" class="contact-link  font-family: Lato-Regularn;"
+                        target="_blank">
+                        <!--   <i class="fab fa-whatsapp "></i>--> <img class="redes"
+                            src="assent/icon/facebook.png"><span style=" font-family:Lato-Regularn;"> William Duarte
+                            Durán </span>
+                    </a>
+                    <a href="https://instagram.com/andywilliam_pintor" class="contact-link  font-family: Lato-Regularn;"
+                        target="_blank">
+                        <!--   <i class="fab fa-instagram"></i>--> <img class="redes"
+                            src="assent/icon/Instagram_.png"><span
+                            style=" font-family:Lato-Regularn;">@andywilliam_pintor</span>
+                    </a>
+                    <a href="tel:+ 8133181058" class="contact-link  font-family:Lato-Regularn;">
+                        <!--  <i class="fas fa-phone"></i> --><img class="redes" src="assent/icon/telephone.png"><span
+                            style=" font-family:Lato-Regularn;">Call</span>
+                    </a>
+                    <a class="contact-link font-family:Lato-Regularn;">
+                        <!-- <i class="fas fa-map-marker-alt"></i>--> <img class="redes" src="assent/icon/map.png"><span
+                            style=" font-family:Lato-Regularn;">14350 N Dale
+                            Mabry Hwy Suite A. Tampa. FL. 33618</span>
+                    </a>
+
+                    <a href="https://paintthetowncitrus.com" class="contact-link  font-family: Lato-Regularn;"
+                        target="_blank">
+                        <!-- <i class="fas fa-globe"></i>--> <img class="redes" src="assent/icon/galeria.png"><span
+                            style=" font-family:Lato-Regularn;">paintthetowncitrus.com
+                        </span>
+                    </a>
+                </div>
+            </div>
     </div>
-
-    <!-- Sección About Me -->
-    <section id="about">
-        <h1 class="section-title" style="text-decoration: underline; text-shadow: 2px 3px 19px black;  color: white; font-family:PlayfairDisplay-Regular">
-            About Me</h1>
-        <div class="home-content">
-
-            <p class="texto_about" style="text-align: justify; font-family: Lato-Regularn;">Born in Santa Clara, Cuba, <b>Andy William Duarte Durán </b>developed a deep passion for painting from a
-                very young age, which led him to explore the world of art through studies with various private teachers.
-            </p>
-            <p  class="texto_about" style="text-align: justify; font-family: Lato-Regularn;">His dedication and talent led him to enroll at the Oscar Fernández Morera Professional Art School in
-                Trinidad, Cuba, where he completed his final year at the Benny Moré Academy in Cienfuegos, consolidating
-                his skills and expanding his artistic vision.</p>
-            <p class="texto_about" style="text-align: justify; font-family: Lato-Regularn;">During his training, Andy participated in multiple exhibitions that allowed him to share his work with a
-                wider audience and receive valuable feedback on his art.</p>
-            <p class="texto_about" style="text-align:justify; font-family: Lato-Regularn;">After completing his studies, he served two years of military service and later enrolled at the Higher
-                Institute of Art in Havana, where he earned a degree in Conservation and Restoration of Cultural
-                Heritage.</p>
-            <p class="texto_about" style="text-align: justify; font-family: Lato-Regularn;">He had the opportunity to share his passion and knowledge as a professor at his alma mater's Paper and
-                Photography Restoration Workshop, guiding future restorers and artists in the preservation of cultural
-                heritage.</p>
-            <p class="texto_about" style="text-align: justify; font-family: Lato-Regularn;">His work at the Cuban Fund for Cultural Assets as a decorator also allowed him to explore his creativity
-                through projects aimed at strengthening his country's cultural identity.</p>
-            <p class="texto_about" style="text-align:justify; font-family: Lato-Regularn;">Throughout his career, Andy has participated in various artistic initiatives and restoration projects,
-                standing out for his commitment to heritage conservation. His approach to teaching and practice reflects
-                an unwavering dedication to art and cultural values, values he continues to promote in each of his
-                projects.</p><br>
-            <!--Boton modal para ver mas informacion-->
-      <!--       <button class="open-modal-btn">Abrir Modal</button> -->  
-    <button class="open-modal-btn" style="font-family: Lato-Regularn;" title="Click for more" onclick="document.querySelector('.modal').style.display = 'flex'">Click for more
-               </button>
-
-        </div>
-
-    </section>
-
-    <!-- Sección Contacto -->
-    <section id="contact">
-        <h1 class="section-title" style="text-decoration: underline; text-shadow: 2px 3px 19px black;  color: white; font-family: Lato-Regular;">
-            Contact</h1>
-
-        <div class="contact-links">
-
-            <a href="mailto:duarteduran9410@gmail.com" class="contact-link  font-family: Lato-Regularn;" target="_blank">
-                <!--     <i class="fas fa-envelope"></i> --><img class="redes"
-                    src="assent/icon/gmail.png"><span style=" font-family:Lato-Regularn;"> duarteduran9410@gmail.com
-           </span>  </a>
-            <a href="https://wa.me/18133181058" class="contact-link  font-family: Lato-Regularn;" target="_blank">
-                <!--   <i class="fab fa-whatsapp "></i>--> <img class="redes" src="assent/icon/whatsapp.png"><span style=" font-family:Lato-Regularn;">  William Duarte Durán  </span>  </a>
-            <a href="https://instagram.com/andywilliam_pintor" class="contact-link  font-family: Lato-Regularn;" target="_blank">
-                <!--   <i class="fab fa-instagram"></i>--> <img class="redes"
-                    src="assent/icon/Instagram_.png"><span style=" font-family:Lato-Regularn;">@andywilliam_pintor</span>   </a>           
-            <a href="tel:+ 8133181058" class="contact-link  font-family:Lato-Regularn;">
-                <!--  <i class="fas fa-phone"></i> --><img class="redes" src="assent/icon/telephone.png"><span style=" font-family:Lato-Regularn;">Call</span>          </a>
-            <a class="contact-link font-family:Lato-Regularn;" >
-                <!-- <i class="fas fa-map-marker-alt"></i>--> <img class="redes" src="assent/icon/map.png"><span style=" font-family:Lato-Regularn;">14350 N Dale
-                Mabry Hwy Suite A. Tampa. FL. 33618</span> </a> 
-            
-            <a href="https://paintthetowncitrus.com" class="contact-link  font-family: Lato-Regularn;" target="_blank">
-                <!-- <i class="fas fa-globe"></i>--> <img class="redes"
-                    src="assent/icon/galeria.png"><span style=" font-family:Lato-Regularn;">paintthetowncitrus.com
-                    </span>   </a>
-          
-        </div>
-        </div>
+    </div>
     </section>
     <!-- Boton de Ventana Modal Info importante-->
-   <!-- <div class="main-content">
+    <!-- <div class="main-content">
         <button class="open-modal-btn">Abrir Modal</button>
     </div>-->
     <!-- Ventana Modal Info importante-->
-    
-    <div class="modal" id="myModal" style=" font-family:Lato-Regularn;">
-        <div class="modal-content">
-            <button class="close-btn">&times;</button>
-         <div class="modal-header">
-               <h3 style="font-family:PlayfairDisplay-Regular; text-shadow: 2px 3px 19px black;  color: white;"><b> More Information</b></h3>
+
+    <div class="modal_info" id="myModal_info" style=" font-family:Lato-Regularn;">
+        <div class="modal-content-info">
+            <button class="close-btn-info">&times;</button>
+            <div class="modal-header-info">
+                <h3 style="font-family:PlayfairDisplay-Regular; text-shadow: 2px 3px 19px black;  color: white;"><b>
+                        More Information</b></h3>
             </div>
-            
-             <h5 style="text-align: center; font-family:PlayfairDisplay-Regular;"><b>I invite you to my Classes in Tampa<br> Open to All Ages and Levels!</b></h5><br>
+
+            <h5 style="text-align: center; font-family:PlayfairDisplay-Regular;"><b>I invite you to my Classes in
+                    Tampa<br> Open to All Ages and Levels!</b></h5><br>
             <!-- Acordeón -->
             <div class="accordion">
                 <div class="accordion-item">
@@ -416,7 +614,8 @@
                         <i class="fas fa-chevron-down accordion-icon"></i>
                     </div>
                     <div class="accordion-content">
-                        <p style="font-family:Lato-Regularn;">Based on the size, level of detail, and complexity of the painting — so you’ll get something
+                        <p style="font-family:Lato-Regularn;">Based on the size, level of detail, and complexity of the
+                            painting — so you’ll get something
                             that fits both your vision and your budget. </p>
                     </div>
                 </div>
@@ -427,57 +626,71 @@
                         <i class="fas fa-chevron-down accordion-icon"></i>
                     </div>
                     <div class="accordion-content">
-                        <p style="font-family:Lato-Regularn;">Want to learn oil painting, whether as a hobby or a deeper artistic pursuit? Join my painting
+                        <p style="font-family:Lato-Regularn;">Want to learn oil painting, whether as a hobby or a deeper
+                            artistic pursuit? Join my painting
                             classes in Tampa, open to all ages and experience levels. </p>
                     </div>
                 </div>
 
                 <div class="accordion-item">
-                    <div class="accordion-header" >
+                    <div class="accordion-header">
                         <span style="font-family:PlayfairDisplay-Regular">✅ Group Classes</span>
                         <i class="fas fa-chevron-down accordion-icon"></i>
                     </div>
                     <div class="accordion-content">
-                       <b> <p style="font-family:Lato-Regularn;">Location: </b>Paint the Town Citrus Gallery, 14350 N Dale Mabry Hwy Suite A, Tampa, FL 33618.<br>
-                          <b>  Price: </b>$100 for a 4-hour session.<br>
-                          <B>  Includes: </B>All art materials, food, and drinks.<br>
-                       <b>    Schedule:</b>  Based on the official calendar posted by the gallery, or contact me directly for
-                            details.<br></p>
+                        <b>
+                            <p style="font-family:Lato-Regularn;">Location:
+                        </b>Paint the Town Citrus Gallery, 14350 N Dale Mabry Hwy Suite A, Tampa, FL 33618.<br>
+                        <b> Price: </b>$100 for a 4-hour session.<br>
+                        <B> Includes: </B>All art materials, food, and drinks.<br>
+                        <b> Schedule:</b> Based on the official calendar posted by the gallery, or contact me directly
+                        for
+                        details.<br></p>
                     </div>
                 </div>
-            
+
                 <div class="accordion-item">
                     <div class="accordion-header">
                         <span style="font-family:PlayfairDisplay-Regular">✅ Private Intensive Classes</span>
                         <i class="fas fa-chevron-down accordion-icon"></i>
                     </div>
                     <div class="accordion-content">
-                       <b> <p style="font-family:Lato-Regularn;">Duration: </b>4 hours per session.<br>
-                       <b>     Price: </b>$165 per session.<br>
-                            For all ages, children and adults alike, with customized instruction based on your level and
-                            goals.<bR>
-                        <b>    Language is not a barrier:</b> Although my primary language is Spanish, don’t worry! The gallery
-                            provides translation tools and other artists on-site who speak English to ensure you fully
-                            enjoy
-                            and understand the class.<br>
-                            Reach out directly to book your private session or get more info
-                            <br>
+                        <b>
+                            <p style="font-family:Lato-Regularn;">Duration:
+                        </b>4 hours per session.<br>
+                        <b> Price: </b>$165 per session.<br>
+                        For all ages, children and adults alike, with customized instruction based on your level and
+                        goals.<bR>
+                        <b> Language is not a barrier:</b> Although my primary language is Spanish, don’t worry! The
+                        gallery
+                        provides translation tools and other artists on-site who speak English to ensure you fully
+                        enjoy
+                        and understand the class.<br>
+                        Reach out directly to book your private session or get more info
+                        <br>
                         </p>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <span style="font-family:PlayfairDisplay-Regular">✅ Three Simple Steps to Start Your Custom Painting</span>
+                        <span style="font-family:PlayfairDisplay-Regular">✅ Three Simple Steps to Start Your Custom
+                            Painting</span>
                         <i class="fas fa-chevron-down accordion-icon"></i>
                     </div>
                     <div class="accordion-content">
-                        <p style="font-family:Lato-Regularn;"><b>1. Browse my gallery or send me your photo:</b> Choose a design or a special image you’d love to
+                        <p style="font-family:Lato-Regularn;"><b>1. Browse my gallery or send me your photo:</b> Choose
+                            a design or a special image you’d love to
                             turn
                             into art.<br>
-                           <b>2. Measure your space: </b> This helps me give you the perfect size and quote.<br>
-                           <b> 3. Contact me: </b>With your vision and measurements in hand, I’ll help bring your idea to
-                            life.<bR><br></p>
-                         <b> <p style="text-align: center; font-family:PlayfairDisplay-Regular">  📩 Ready to create your masterpiece? Let’s get started!</p> </b>
+                            <b>2. Measure your space: </b> This helps me give you the perfect size and quote.<br>
+                            <b> 3. Contact me: </b>With your vision and measurements in hand, I’ll help bring your idea
+                            to
+                            life.<bR><br>
+                        </p>
+                        <b>
+                            <p style="text-align: center; font-family:PlayfairDisplay-Regular"> 📩 Ready to create your
+                                masterpiece? Let’s get started!</p>
+                        </b>
                     </div>
                 </div>
             </div>
@@ -487,16 +700,17 @@
 
     <!-- Pie de página -->
     <footer>
-        <p style="font-family:PlayfairDisplay-Regular"; >Andy William Duarte Durán. All Right Reserved. &copy; <span id="year"></span></p>
-        
+        <p style="font-family:PlayfairDisplay-Regular" ;>Andy William Duarte Durán. All Right Reserved. &copy; <span
+                id="year"></span></p>
+
     </footer>
 
     <script src="assent/js/flecha_arriba.js"></script>
     <script src="assent/js/programacion.js"></script>
     <script src="assent/bootstrap/bootstrap.min.js"></script>
-    <script src="assent/js/blog_script.js"></script>
+    <!-- <script src="assent/js/blog_script.js"></script>-->
     <script src="assent/js/menu_telefono.js"></script>
-
+    <script src="assent/js/ventana_modal_galaria_nueva.js"></script>
 
 
 </body>
