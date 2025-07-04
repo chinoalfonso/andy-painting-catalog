@@ -688,9 +688,9 @@
                     {src: "assent/cuadros-categ/paisajes/86.jpg", alt: "Landscape 1"},
                     {src: "assent/cuadros-categ/paisajes/95.jpg", alt: "Landscape 2"},
                     {src: "assent/cuadros-categ/paisajes/101.jpg", alt: "Landscape 1"},
-                    {src: "assent/cuadros-categ/paisajes/104jpg", alt: "Landscape 2"},
+                    {src: "assent/cuadros-categ/paisajes/104.jpg", alt: "Landscape 2"},
                     {src: "assent/cuadros-categ/paisajes/105.jpg", alt: "Landscape 1"},
-                    {src: "assent/cuadros-categ/paisajes/107jpg", alt: "Landscape 2"},
+                    {src: "assent/cuadros-categ/paisajes/107.jpg", alt: "Landscape 2"},
                     {src: "assent/cuadros-categ/paisajes/119.jpg", alt: "Landscape 1"},
                     {src: "assent/cuadros-categ/paisajes/148.jpg", alt: "Landscape 2"},
                     {src: "assent/cuadros-categ/paisajes/149.jpg", alt: "Landscape 1"},
@@ -815,9 +815,11 @@
              let contador = document.getElementById("contador");
              let puntosIndicadores = document.getElementById("puntos-indicadores");
              let cerrarBtn = document.querySelector(".cerrar");
+
+             
              
              // Configurar los botones
-          
+           
            /*  document.querySelectorAll(".boton-categoria").forEach(boton => {
                  boton.addEventListener("click", function() {
                      const categoria = this.getAttribute("data-galeria");
@@ -873,23 +875,25 @@
             /*otranueva*/
             function abrirGaleria(categoria) {
                 if (galerias[categoria] && galerias[categoria].length > 0) {
+                     
                     imagenesActuales = galerias[categoria];
                     slideActual = 0;
                     mostrarImagenes();
                     modal.style.display = "block";
                     document.body.style.overflow = "hidden";
-                    
-                    
+                   
+                 
                     // Resetear transformaciones al abrir
                     const slides = document.querySelectorAll(".slide");
                     slides.forEach(slide => {
                         slide.style.transform = "none";
                     });
                 } else {
-                    console.error("Galería vacía o no encontrada:", categoria);
+                    console.error("Not Imagen:", categoria);
                 }
             }
              
+
              // Función para mostrar las imágenes en el carrusel
              function mostrarImagenes() {
                  carrusel.innerHTML = "";
@@ -942,6 +946,7 @@
                      punto.className = `punto ${index === 0 ? 'activo' : ''}`;
                      punto.onclick = () => {
                          cambiarSlide(index - slideActual);
+                        
                      };
                      puntosIndicadores.appendChild(punto);
                  });
@@ -954,6 +959,7 @@
                  const slides = document.querySelectorAll(".slide");
                  const puntos = document.querySelectorAll(".punto");
                  
+                
                  if (slides.length === 0) return;
                  
                  slides[slideActual].classList.remove("activo");
