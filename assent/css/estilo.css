@@ -38,6 +38,11 @@ body {
     color: var(--color-primario);
     background-color: var(--color-fondo);
     padding-top: 60px;
+    
+    
+}
+html{
+   font-size: calc(12px + 0.35vw);     
 }
 
 /* Encabezado */
@@ -107,7 +112,7 @@ header {
     height: 38px;
     margin-left: 20px;
     margin-top: -2px;
-    box-shadow: 0 4px 0 #6eabc6;
+   
 }
 
 .social-icons a:hover {
@@ -231,7 +236,7 @@ header {
     }
 
     nav {
-        margin-left: 0;
+        margin-left: 300px;
         margin-top: 10px;
         width: 100%;
         display: block;
@@ -246,7 +251,7 @@ header {
 
     .navbar-toggle {
         display: flex;
-        background-color: green;
+        background-color:  #253e4c;
 
     }
 
@@ -769,10 +774,6 @@ footer {
 
 /*ventana modal de mas informaion*/
 /* Contenido principal */
-.main-content {
-    margin-top: 60px;
-    padding: 20px;
-}
 
 /*    .open-modal-btn-info {
             background-color: #4CAF50;
@@ -1053,3 +1054,4 @@ footer {
         height: -webkit-fill-available;
     }
 }
+
