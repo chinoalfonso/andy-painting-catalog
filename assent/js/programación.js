@@ -51,7 +51,7 @@ backToTopBtn.addEventListener('click', () => {
 });
 
 // Mobile menu toggle
-document.addEventListener('DOMContentLoad', function(){
+/*document.addEventListener('DOMContentLoad', function(){
  const mobilMenu = document.getElementById('.mobil-menu');
  const navbarMenu = document.getElementById('.menu');
 
@@ -64,11 +64,12 @@ document.addEventListener('DOMContentLoad', function(){
     navbarMenu.classList.remove('active');
  });
 });
-});
+});*/
  
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
 
-
-/*if (menuToggle && menu) {
+if (menuToggle && menu) {
   menuToggle.addEventListener('click', () => {
     menu.classList.toggle('show');
   });
@@ -78,7 +79,7 @@ document.addEventListener('DOMContentLoad', function(){
       menu.classList.remove('show');
     }
   });
-}*/
+}
 
 // Gallery Modal
 const galerias = {
