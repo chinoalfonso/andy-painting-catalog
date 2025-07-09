@@ -51,7 +51,7 @@ backToTopBtn.addEventListener('click', () => {
 });
 
 // Mobile menu toggle
-/*document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.menu');
   
@@ -1197,4 +1197,4 @@ document.querySelectorAll('.accordion-header').forEach(header => {
            } else {
              alert("Please, write the messege before sending.");
            }
-         });
+         
