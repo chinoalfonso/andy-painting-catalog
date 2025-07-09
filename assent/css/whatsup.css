@@ -54,7 +54,8 @@ margin-top: 15px;
   }
 
   .modal-whatup {
-    background: white;
+    background: linear-gradient(135deg, green, white);
+    /*background: white;*/
     padding: 2rem;
     border-radius: 10px;
     width: 90%;
@@ -97,7 +98,8 @@ margin-top: 15px;
   }
 
   .modal-whatup button:hover {
-    background-color: #1ebf5b;
+    background-color: white;
+    cursor: pointer;
   }
 
   .close-btn {

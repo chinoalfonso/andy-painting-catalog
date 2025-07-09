@@ -16,7 +16,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   color: #2c3e50;
-  background-color: #6EABC6;
+  background: linear-gradient(135deg, #6e8efb, white);
+ /* background-color: #6EABC6;*/
   color: white;
 }
 
@@ -80,7 +81,8 @@ p {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: white;
+  background: linear-gradient(-150deg,  whitesmoke, white);
+ /* background-color: white;*/
   position: fixed;
   top: 0;
   width: 100%;
@@ -137,7 +139,8 @@ p {
 
 .menu-toggle span {
   height: 3px;
-  background-color:white;
+  background-color:whitesmoke;
+ 
   border-radius: 2px;
 }
 
@@ -174,9 +177,9 @@ p {
   .menu {
     display: none;
     flex-direction: column;
-    background-color: #fff;
+    background: linear-gradient(135deg, wheat, white);
     position: absolute;
-    top: 50px;
+    top: 10px;
     right: 1rem;
     width: 200px;
     border-radius: 10px;
@@ -184,12 +187,32 @@ p {
     animation: slideDown 0.3s ease;
   }
   .menu.show {
-    display: flex;
+    display:flex;
+   
   }
   .menu-toggle span {
     height: 3px;
     background-color:#6EABC6;
     border-radius: 2px;
+  }
+  .logo-container{
+   
+    max-height: 120px;
+  }
+  .business-name{
+    font-size:medium;
+    margin-top: 0px;
+    
+  }
+  .logo{
+    width: 100px;
+    height: 100px;
+   
+    margin-left:-25x;
+  }
+  .social-icons{
+  margin-top: -20px;
+  
   }
   
 }
@@ -263,7 +286,7 @@ p {
 }
 
 .content-wrapper {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   /* Fondo oscuro semitransparente */
   border-radius: 12px;
   /* Bordes redondeados */
@@ -477,8 +500,9 @@ p {
 /*hasta aqui ///////////////////////////////////////*/
 /* Footer */
 .footer {
-  background-color: #253e4c;
-  color: white;
+  background: linear-gradient(135deg, #253e4c, white);
+  /*background-color: #253e4c;*/
+  color:white;
   padding: 2rem 0;
   text-align: center;
   margin-top: 10px;
@@ -491,7 +515,7 @@ p {
 
 .footer-text {
   margin: 0.3rem 0;
-  color: #ecf0f1;
+  color: black;
 }
 
 #year::before {
@@ -506,6 +530,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
+  
   background-color: white;
   z-index: 1000;
   overflow-y: auto;
@@ -513,7 +538,8 @@ p {
 }
 
 .modal-content {
-  background-color: whitesmoke;
+  background: linear-gradient(115deg,  white,#6e8efb);
+  /*background-color: whitesmoke;*/
   margin: 3rem auto;
   padding: 2rem;
   position: relative;
@@ -526,7 +552,7 @@ p {
 
 .close-btn {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 15px;
   font-size: 2rem;
   cursor: pointer;
@@ -608,9 +634,10 @@ p {
 }
 
 .accordion-item {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid black;
   padding: 1rem 0;
-  background-color: white;
+  background: linear-gradient(115deg,  white,#6e8efb);
+  /*background-color: white;*/
   border-radius: 5px;
   margin-top: 5px;
   color: black;
@@ -618,15 +645,16 @@ p {
 
 .accordion-header {
   background: none;
-  border: none;
+  border:none;
   width: 100%;
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   font-weight: 600;
   padding: 0.5rem 0;
   cursor: pointer;
   color: black;
   position: relative;
+ 
 
 }
 
@@ -634,8 +662,9 @@ p {
   content: "+";
   position: absolute;
   margin-right: 20px;
+  margin-top: 20px;
   right: 0;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   transition: transform 0.3s ease;
 }
 
@@ -651,6 +680,7 @@ p {
   transition: max-height 0.3s ease;
   padding: 0 0 1rem 0;
   padding: 19px;
+  backdrop-filter:var(--sombra) ;
 }
 
 .accordion-item.active .accordion-body {
@@ -659,7 +689,7 @@ p {
 }
 
 /* Floating Buttons */
-.back-to-top {
+.back-to-top{
   position: fixed;
   z-index: 999;
   border: none;
@@ -669,7 +699,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: green;
+   background-color: green;
   color: #253e4c;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -687,12 +717,12 @@ p {
   bottom: 80px;
 }
 
-/*.whatsapp-btn {
+.whatsapp-btn {
   right: 20px;
   bottom: 30px;
-}*/
+}
 
-.back-to-top.show {
+.back-to-top.show  {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
