@@ -50,46 +50,26 @@ backToTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Mobile menu toggle
-document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.querySelector('.menu-toggle');
+/document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.mobil-menu'); // Note: if it's an id, we should use '#id'
   const menu = document.querySelector('.menu');
-  
+
   if (menuToggle && menu) {
-    // 1. Alternar menú al hacer clic en el botón
-    menuToggle.addEventListener('click', function(e) {
-      e.stopPropagation(); // Evita que el evento llegue al documento
-      menu.classList.toggle('show');
+    menuToggle.addEventListener('click', function() {
+      menu.classList.toggle('active'); // The first code block used 'active'
     });
 
-    // 2. Cerrar menú al hacer clic en enlaces
     const menuLinks = menu.querySelectorAll('a');
-    menuLinks.forEach(link => {
+    menuLinks.forEach(function(link) {
       link.addEventListener('click', function() {
-        menu.classList.remove('show');
-        
-        // 3. Desplazamiento suave (si los enlaces son anclas)
-        const targetId = this.getAttribute('href');
-        if (targetId.startsWith('#')) {
-          e.preventDefault();
-          const targetElement = document.querySelector(targetId);
-          if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-          }
-        }
+        menu.classList.remove('active');
       });
     });
 
-    // 3. Cerrar menú al hacer clic fuera
-    document.addEventListener('click', function(e) {
-      if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
-        menu.classList.remove('show');
+    document.addEventListener('click', function(event) {
+      if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+        menu.classList.remove('active');
       }
-    });
-
-    // Prevenir cierre accidental al hacer clic dentro del menú
-    menu.addEventListener('click', function(e) {
-      e.stopPropagation();
     });
   }
 });
@@ -1197,4 +1177,4 @@ document.querySelectorAll('.accordion-header').forEach(header => {
            } else {
              alert("Please, write the messege before sending.");
            }
-         
+      
