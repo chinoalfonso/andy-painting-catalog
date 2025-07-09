@@ -51,35 +51,48 @@ backToTopBtn.addEventListener('click', () => {
 });
 
 // Mobile menu toggle
-/*document.addEventListener('DOMContentLoad', function(){
- const mobilMenu = document.getElementById('.mobil-menu');
- const navbarMenu = document.getElementById('.menu');
+/*document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  
+  if (menuToggle && menu) {
+    // 1. Alternar menú al hacer clic en el botón
+    menuToggle.addEventListener('click', function(e) {
+      e.stopPropagation(); // Evita que el evento llegue al documento
+      menu.classList.toggle('show');
+    });
 
- mobilMenu.addEventListener('click', function(){
-  navbarMenu.classList.toggle('active');
- });
- const navlink = document.querySelectorAll('.menu a');
- navlink.forEach(link => {
-   link.addEventListener('click', function(){
-    navbarMenu.classList.remove('active');
- });
+    // 2. Cerrar menú al hacer clic en enlaces
+    const menuLinks = menu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        menu.classList.remove('show');
+        
+        // 3. Desplazamiento suave (si los enlaces son anclas)
+        const targetId = this.getAttribute('href');
+        if (targetId.startsWith('#')) {
+          e.preventDefault();
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+
+    // 3. Cerrar menú al hacer clic fuera
+    document.addEventListener('click', function(e) {
+      if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+        menu.classList.remove('show');
+      }
+    });
+
+    // Prevenir cierre accidental al hacer clic dentro del menú
+    menu.addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  }
 });
-});*/
- 
-const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-
-if (menuToggle && menu) {
-  menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('show');
-  });
-
-  document.addEventListener('click', (event) => {
-    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-      menu.classList.remove('show');
-    }
-  });
-}
 
 // Gallery Modal
 const galerias = {
