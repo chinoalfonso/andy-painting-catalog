@@ -50,30 +50,64 @@ backToTopBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-/document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.querySelector('.mobil-menu'); // Note: if it's an id, we should use '#id'
-  const menu = document.querySelector('.menu');
+// Mobile menu toggle
+/*document.addEventListener('DOMContentLoad', function(){
+ const mobilMenu = document.getElementById('.mobil-menu');
+ const navbarMenu = document.getElementById('.menu');
 
+ mobilMenu.addEventListener('click', function(){
+  navbarMenu.classList.toggle('active');
+ });
+ const navlink = document.querySelectorAll('.menu a');
+ navlink.forEach(link => {
+   link.addEventListener('click', function(){
+    navbarMenu.classList.remove('active');
+ });
+});
+});*/
+ 
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
+  
   if (menuToggle && menu) {
-    menuToggle.addEventListener('click', function() {
-      menu.classList.toggle('active'); // The first code block used 'active'
+    // 1. Alternar menÃº al hacer clic en el botÃ³n
+    menuToggle.addEventListener('click', function(e) {
+      e.stopPropagation(); // Evita que el evento llegue al documento
+      menu.classList.toggle('show');
     });
 
+    // 2. Cerrar menÃº al hacer clic en enlaces
     const menuLinks = menu.querySelectorAll('a');
-    menuLinks.forEach(function(link) {
+    menuLinks.forEach(link => {
       link.addEventListener('click', function() {
-        menu.classList.remove('active');
+        menu.classList.remove('show');
+        
+        // 3. Desplazamiento suave (si los enlaces son anclas)
+        const targetId = this.getAttribute('href');
+        if (targetId.startsWith('#')) {
+          e.preventDefault();
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
       });
     });
 
-    document.addEventListener('click', function(event) {
-      if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-        menu.classList.remove('active');
+    // 3. Cerrar menÃº al hacer clic fuera
+    document.addEventListener('click', function(e) {
+      if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+        menu.classList.remove('show');
       }
+    });
+
+    // Prevenir cierre accidental al hacer clic dentro del menÃº
+    menu.addEventListener('click', function(e) {
+      e.stopPropagation();
     });
   }
 });
-
 // Gallery Modal
 const galerias = {
   abstracto: [
@@ -1177,4 +1211,4 @@ document.querySelectorAll('.accordion-header').forEach(header => {
            } else {
              alert("Please, write the messege before sending.");
            }
-      
+         });
