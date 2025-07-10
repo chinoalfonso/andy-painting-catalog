@@ -105,6 +105,7 @@ p {
   background-size: contain;
   margin-bottom: 0.5rem;
   margin-left:0;
+ 
 }
 
 .business-name {
@@ -179,14 +180,16 @@ p {
   .menu {
     display: none;
     flex-direction: column;
-    background: linear-gradient(135deg, wheat, white);
+    background: linear-gradient(135deg, wheat,#6EABC6);
     position: absolute;
     top: 10px;
     right: 1rem;
-    width: 200px;
+    width: 150px;
+   
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     animation: slideDown 0.3s ease;
+   
   }
   .menu.show {
     display:flex;
@@ -209,7 +212,6 @@ p {
   .logo{
     width: 100px;
     height: 100px;
-   
     margin-left: -25px;
   }
   .social-icons{
@@ -217,6 +219,12 @@ p {
   
   }
   
+  .informacion{
+    background: linear-gradient(115deg,  white, wheat);
+      border-radius: 10px;
+
+ 
+  }
 }
 @keyframes slideDown {
   from { opacity: 0; transform: translateY(-10px); }
@@ -540,8 +548,8 @@ object-fit: fill;
 }
 
 .modal-content {
-  background: linear-gradient(115deg,  white,#6e8efb);
-  /*background-color: whitesmoke;*/
+ /* background: linear-gradient(115deg,  white,#6e8efb);*/
+  background-color: whitesmoke;
   margin: 3rem auto;
   padding: 2rem;
   position: relative;
@@ -638,13 +646,30 @@ object-fit: fill;
 .accordion-item {
   border-bottom: 1px solid black;
   padding: 1rem 0;
-  background: linear-gradient(115deg,  white,#6e8efb);
-  /*background-color: white;*/
+  /*background: linear-gradient(115deg,  white,#6e8efb);*/
+  background-color: white;
   border-radius: 5px;
   margin-top: 5px;
   color: black;
+  
 }
+/*esto es lo mio*/
+.informacion{
+ color: transparent;
+ -webkit-text-stroke: 2px #6e8efb;
+}
+.invitacion{
+  background: linear-gradient(to right, #f00, #6e8efb, #00f);
+-webkit-background-clip:text;
+-webkit-text-fill-color: transparent;
+}
+.informacion{
+  background: linear-gradient(115deg,  white,whitesmoke);
+    border-radius: 10px;
 
+
+}
+/*hasta aqui*/
 .accordion-header {
   background: none;
   border:none;
