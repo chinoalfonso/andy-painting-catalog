@@ -1024,8 +1024,8 @@ function mostrarImagenes() {
            this.classList.toggle("zoom");
        };
        
-       // Soporte para touch
-       let touchStartX = 0;
+       // Soporte para touch -lo desactive para probar
+   /*    let touchStartX = 0;
        let touchEndX = 0;
        
        img.addEventListener('touchstart', function(e) {
@@ -1045,7 +1045,7 @@ function mostrarImagenes() {
            } else if (Math.abs(touchEndX - touchStartX) < 10) {
                this.classList.toggle("zoom"); // Tocar para zoom
            }
-       }
+       }*/
        
        slide.appendChild(img);
        carrusel.appendChild(slide);
