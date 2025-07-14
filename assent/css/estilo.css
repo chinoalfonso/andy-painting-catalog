@@ -668,19 +668,27 @@ object-fit: fill;
 }
 /*esto es lo mio*/
 .informacion{
- color: transparent;
- -webkit-text-stroke: 2px black;
+ /*color: transparent;*/
+/* -webkit-text-stroke: 2px black;*/
+ animation: color 5s  linear infinite;
+
 }
+@keyframes color{
+  0% {color:  black;}
+  50% {color: crimson ;}
+ 100% {color: darkgoldenrod;}
+ }
 .invitacion{
-  background: linear-gradient(to right, #f00, #6e8efb,black);
+  /*background: linear-gradient(to right, #f00, #6e8efb,black);*/
+background-color: rgb(252, 251, 210);
 -webkit-background-clip:text;
+animation: wave 2s linear infinite;
 -webkit-text-fill-color: transparent;
 }
-.informacion{
-  background: linear-gradient(115deg,  white,whitesmoke);
-    border-radius: 10px;
-
-
+@keyframes wave{
+ 0% {text-shadow: 5px 0 black;}
+ 50% {text-shadow: -2px 0 black;}
+100% {text-shadow: 5px 0 black;}
 }
 /*hasta aqui*/
 .accordion-header {
@@ -1056,4 +1064,14 @@ object-fit: fill;
    background-attachment: border-box;
    box-shadow: 0 0 20px rgba(255, 215, 100, 0.6),
    inset 0 0 15px rgba(255, 255, 255, 0.8);
+}
+.card{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+ 
 }
