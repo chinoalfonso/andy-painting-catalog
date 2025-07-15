@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 2. Cerrar menÃº al hacer clic en enlaces
     const menuLinks = menu.querySelectorAll('a');
+    
     menuLinks.forEach(link => {
       link.addEventListener('click', function() {
         menu.classList.remove('show');
@@ -958,10 +959,10 @@ boton.addEventListener("click", abrirGaleriaHandler);
 boton.addEventListener("touchend", abrirGaleriaHandler);
 
 // Feedback táctil mejorado
-boton.addEventListener("touchstart", function(e) {
+/*boton.addEventListener("touchstart", function(e) {
   this.style.transform = "scale(0.95)";
   e.preventDefault();
-});
+});*/
 
 boton.addEventListener("touchend", function() {
   this.style.transform = "";
@@ -1025,7 +1026,7 @@ function mostrarImagenes() {
        };
        
        // Soporte para touch -lo desactive para probar
-   /*    let touchStartX = 0;
+      let touchStartX = 0;
        let touchEndX = 0;
        
        img.addEventListener('touchstart', function(e) {
@@ -1045,7 +1046,7 @@ function mostrarImagenes() {
            } else if (Math.abs(touchEndX - touchStartX) < 10) {
                this.classList.toggle("zoom"); // Tocar para zoom
            }
-       }*/
+       }
        
        slide.appendChild(img);
        carrusel.appendChild(slide);
