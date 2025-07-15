@@ -166,10 +166,15 @@ p {
   padding: 10px;
 }
 
-.menu a:hover,
-.menu a.active {
+.menu a:hover {
+  color:  #6EABC6;
+}
+
+.menu a.active
+{
   color: #e74c3c;
 }
+
 .hero-section {
   margin-top: 80px;
   position: relative;
