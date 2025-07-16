@@ -559,8 +559,10 @@ const galerias = {
       {src: "assent/cuadros-categ/humanizadas/211.jpg", alt: "Humanized 2"},
       {src: "assent/cuadros-categ/humanizadas/218.jpg", alt: "Humanized 2"},
       {src: "assent/cuadros-categ/humanizadas/221.jpg", alt: "Humanized 1"},
-      {src: "assent/cuadros-categ/humanizadas/226.jpg", alt: "Humanized 2"},
+      {src: "assent/cuadros-categ/humanizadas/259.jpg", alt: "Humanized 2"},
       {src: "assent/cuadros-categ/humanizadas/269.jpg", alt: "Humanized 1"},
+      {src: "assent/cuadros-categ/humanizadas/260.jpg", alt: "Humanized 1"},
+      {src: "assent/cuadros-categ/humanizadas/266.jpg", alt: "Humanized 1"},
       {src: "assent/cuadros-categ/humanizadas/299.jpg", alt: "Humanized 2"},
       {src: "assent/cuadros-categ/humanizadas/344.jpg", alt: "Humanized 1"},
       {src: "assent/cuadros-categ/humanizadas/373.jpg", alt: "Humanized 2"},
@@ -959,10 +961,10 @@ boton.addEventListener("click", abrirGaleriaHandler);
 boton.addEventListener("touchend", abrirGaleriaHandler);
 
 // Feedback táctil mejorado
-/*boton.addEventListener("touchstart", function(e) {
+boton.addEventListener("touchstart", function(e) {
   this.style.transform = "scale(0.95)";
   e.preventDefault();
-});*/
+});
 
 boton.addEventListener("touchend", function() {
   this.style.transform = "";
