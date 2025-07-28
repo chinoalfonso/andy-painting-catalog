@@ -734,8 +734,14 @@ animation: wave 2s linear infinite;
   padding: 0 0 1rem 0;
   padding: 19px;
   backdrop-filter:var(--sombra) ;
+ 
 }
-
+.acordion{
+ filter: drop-shadow(10px 7px 8px #06f512);
+border-left: 2px solid orange;
+border-radius: 5px;
+padding-left: 4px;
+}
 .accordion-item.active .accordion-body {
   max-height: 300px;
   padding-top: 1rem;
@@ -784,10 +790,10 @@ animation: wave 2s linear infinite;
 
 /*mio*/
 .text-content{
-  border-left: 4px solid #253e4c;
+  border-left: 4px solid orange;
   padding-left: 15px;
   margin-left: 10px;
-  border-right: 4px solid #253e4c;
+  border-right: 4px solid orange;
   padding-right: 15px;
   margin-right: 10px;
 }
