@@ -743,7 +743,7 @@ border-radius: 5px;
 padding-left: 4px;
 }
 .accordion-item.active .accordion-body {
-  max-height: 300px;
+  max-height: 550px;
   padding-top: 1rem;
 }
 
@@ -796,6 +796,7 @@ padding-left: 4px;
   border-right: 4px solid orange;
   padding-right: 15px;
   margin-right: 10px;
+  border-radius: 12px;
 }
 
 .lista {
